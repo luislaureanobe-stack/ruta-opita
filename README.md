@@ -1,10 +1,10 @@
-# Ruta Opita
+﻿# Ruta Opita
 
 Landing page académica para presentar ideas de viaje por el Huila. Construida con HTML, Tailwind CSS 4 mediante Play CDN y JavaScript sin librerías adicionales.
 
 **Sitio publicado:** <https://luislaureanobe-stack.github.io/ruta-opita/>
 **Repositorio:** <https://github.com/luislaureanobe-stack/ruta-opita>
-**Autor:** Luis Armando Laureano Betanconurth
+**Autor:** Luis Armando Laureano Betancourth
 **Asignatura:** Seminario en Gestión de Software Ágil Asistido por IA · Módulo 3
 **Docente:** Camilo Morales Vargas
 
