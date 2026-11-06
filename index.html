@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f3e9">
+  <meta name="description" content="Explora paisajes, cultura y experiencias del Huila con Ruta Opita.">
+  <title>Ruta Opita | Explora el Huila a tu ritmo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @custom-variant dark (&:where(.dark, .dark *));
+    @theme {
+      --font-sans: "DM Sans", sans-serif;
+      --font-display: "Manrope", sans-serif;
+      --color-brand-cream: #F6F3E9;
+      --color-brand-paper: #FFFEFA;
+      --color-brand-forest: #234537;
+      --color-brand-pine: #173429;
+      --color-brand-gold: #D5A84A;
+      --color-brand-gold-soft: #E8C87E;
+      --color-brand-ink: #1E2A22;
+      --color-brand-muted: #58675E;
+      --color-state-success: #166534;
+      --color-state-error: #B42318;
+      --color-state-warning: #8A4B00;
+      --color-state-success-bg: #DCFCE7;
+      --color-state-error-bg: #FEE4E2;
+      --color-state-warning-bg: #FFF3D6;
+    }
+    #interest option {
+      background-color: #FFFEFA;
+      color: #1E2A22;
+    }
+
+    .dark #interest option {
+      background-color: #173429;
+      color: #F6F3E9;
+    }
+  </style>
+</head>
+<body class="bg-brand-cream font-sans text-brand-ink antialiased dark:bg-brand-pine dark:text-brand-cream">
+  <a href="#contenido" class="sr-only z-50 rounded-lg bg-white p-3 text-brand-forest focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:outline-2 focus:outline-offset-2 focus:outline-brand-forest dark:outline-brand-gold">Saltar al contenido</a>
+
+  <!-- Navegación principal -->
+  <header class="sticky top-0 z-40 border-b border-brand-forest/10 bg-brand-cream/95 backdrop-blur dark:border-white/10 dark:bg-brand-pine/95">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8" aria-label="Navegación principal">
+      <a href="#inicio" class="font-display text-xl font-extrabold tracking-tight text-brand-forest dark:text-brand-cream" aria-label="Ruta Opita, inicio">Ruta <span class="text-state-warning">Opita</span><span aria-hidden="true">.</span></a>
+      <div class="hidden items-center gap-8 md:flex">
+        <a class="text-sm font-semibold hover:text-state-warning focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-forest dark:outline-brand-gold" href="#rutas">Rutas</a>
+        <a class="text-sm font-semibold hover:text-state-warning focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-forest dark:outline-brand-gold" href="#nosotros">Nuestra tierra</a>
+        <a class="text-sm font-semibold hover:text-state-warning focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-forest dark:outline-brand-gold" href="#preguntas">Preguntas</a>
+        <a class="rounded-full bg-brand-forest px-5 py-2.5 text-sm font-bold text-white transition hover:bg-brand-pine focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-forest dark:outline-brand-gold dark:bg-brand-gold dark:text-brand-pine" href="#contacto">Planea tu viaje</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="theme-toggle" type="button" class="rounded-full border border-brand-forest/20 p-2.5 hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-forest dark:outline-brand-gold dark:border-white/20 dark:hover:bg-white/10" aria-label="Activar modo oscuro" aria-pressed="false"><span aria-hidden="true">☾</span></button>
+        <button id="menu-toggle" type="button" class="rounded-xl border border-brand-forest/20 p-2.5 hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-forest dark:outline-brand-gold md:hidden dark:border-white/20 dark:hover:bg-white/10" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu"><span aria-hidden="true">☰</span></button>
+      </div>
+    </nav>
+    <div id="mobile-menu" class="hidden border-t border-brand-forest/10 px-5 py-4 md:hidden dark:border-white/10">
+      <div class="mx-auto flex max-w-7xl flex-col gap-4">
+        <a class="mobile-link rounded-lg py-2 font-semibold hover:text-state-warning" href="#rutas">Rutas</a>
+        <a class="mobile-link rounded-lg py-2 font-semibold hover:text-state-warning" href="#nosotros">Nuestra tierra</a>
+        <a class="mobile-link rounded-lg py-2 font-semibold hover:text-state-warning" href="#preguntas">Preguntas</a>
+        <a class="mobile-link rounded-lg bg-brand-forest px-4 py-3 text-center font-bold text-white dark:bg-brand-gold dark:text-brand-pine" href="#contacto">Planea tu viaje</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- Hero -->
+    <section id="inicio" class="relative isolate overflow-hidden bg-brand-forest text-white dark:bg-brand-pine">
+      <div class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_80%_15%,rgba(213,168,74,.38),transparent_38%),linear-gradient(120deg,#173429_5%,#234537_58%,#53684f_100%)]"></div>
+      <div class="mx-auto grid min-h-[620px] max-w-7xl items-center gap-12 px-5 py-20 md:grid-cols-[1.05fr_.95fr] lg:px-8 lg:py-28">
+        <div class="max-w-2xl">
+          <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-2 text-sm font-semibold"><span aria-hidden="true">✦</span> Naturaleza, historia y caminos opitas</p>
+          <h1 class="font-display text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">El Huila se vive <span class="text-brand-gold">sin afán.</span></h1>
+          <p class="mt-6 max-w-xl text-lg leading-8 text-white/85">Del silencio de la Tatacoa a la memoria de San Agustín. Encuentra una ruta que se parezca a ti y descubre el sur de Colombia paso a paso.</p>
+          <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+            <a href="#rutas" class="rounded-full bg-brand-gold px-7 py-3.5 text-center font-bold text-brand-pine transition hover:bg-amber-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">Explorar destinos <span aria-hidden="true">→</span></a>
+            <a href="#nosotros" class="rounded-full border border-white/50 px-7 py-3.5 text-center font-bold text-white transition hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-forest dark:outline-brand-gold">Conoce la región</a>
+          </div>
+          <div class="mt-12 flex flex-wrap gap-x-8 gap-y-3 text-sm text-white/75"><span><strong class="text-white">37</strong> municipios por descubrir</span><span><strong class="text-white">3</strong> paisajes para empezar</span></div>
+        </div>
+        <div class="relative mx-auto w-full max-w-xl">
+          <div class="absolute -inset-4 rotate-3 rounded-[2rem] border border-white/20"></div>
+          <div role="img" aria-label="Ilustración abstracta de un paisaje del Huila al atardecer" class="relative flex aspect-[4/3] items-end overflow-hidden rounded-[1.75rem] bg-[linear-gradient(180deg,rgba(35,69,55,.05),rgba(23,52,41,.85)),radial-gradient(ellipse_at_65%_30%,#e8c471_0%,#bf7f3e_19%,#56664d_42%,#234537_70%)] p-6 shadow-2xl sm:p-8">
+            <div class="absolute left-[10%] top-[15%] h-24 w-24 rounded-full bg-brand-gold/80 blur-[1px]"></div><div class="absolute bottom-0 left-0 h-2/5 w-full bg-[linear-gradient(165deg,transparent_10%,rgba(20,47,38,.7)_11%,rgba(20,47,38,.9)_75%)]"></div>
+            <div class="relative rounded-2xl border border-white/20 bg-brand-pine/60 p-4 backdrop-blur"><p class="text-xs font-bold uppercase tracking-[.2em] text-brand-gold">Una región, muchos mundos</p><p class="mt-1 font-display text-xl font-bold">Tu próxima historia empieza aquí.</p></div>
+          </div>
+          <p class="mt-3 text-right text-xs text-white/60">Paisaje ilustrativo · reemplazar por fotografía propia o con licencia</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rutas y destinos -->
+    <section id="rutas" class="mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-28">
+      <div class="flex flex-col justify-between gap-5 md:flex-row md:items-end">
+        <div><p class="font-bold uppercase tracking-[.18em] text-state-warning">Elige tu próxima ruta</p><h2 class="mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl">Cuatro formas de sentir el Huila</h2></div>
+        <p class="max-w-md text-brand-muted dark:text-white/70">Ideas para una escapada, un fin de semana largo o ese viaje que llevas tiempo imaginando.</p>
+      </div>
+      <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <article class="group overflow-hidden rounded-3xl border border-brand-forest/10 bg-brand-paper shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-white/10 dark:bg-white/5">
+          <div role="img" aria-label="Formaciones rocosas rojizas en un paisaje desértico" class="h-44 bg-[linear-gradient(155deg,#e9ad67,#ad5e38_54%,#70463b)]"><div class="flex h-full items-end p-4"><span class="rounded-full bg-brand-pine/75 px-3 py-1 text-xs font-bold text-white">Villavieja</span></div></div>
+          <div class="p-5"><p class="text-xs font-bold uppercase tracking-wider text-state-warning">Cielo y desierto</p><h3 class="mt-2 font-display text-xl font-bold">Tatacoa al atardecer</h3><p class="mt-2 text-sm leading-6 text-brand-muted dark:text-white/70">Camina entre tonos ocres y reserva tiempo para mirar el cielo nocturno.</p><a href="#contacto" class="mt-4 inline-flex font-bold text-brand-forest underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-brand-forest dark:outline-brand-gold dark:text-brand-gold">Ver idea de viaje <span class="ml-2" aria-hidden="true">→</span></a></div>
+        </article>
+        <article class="group overflow-hidden rounded-3xl border border-brand-forest/10 bg-brand-paper shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-white/10 dark:bg-white/5">
+          <div role="img" aria-label="Escultura de piedra rodeada por vegetación andina" class="h-44 bg-[linear-gradient(145deg,#a2ad78,#58664a_52%,#334c3d)]"><div class="flex h-full items-end p-4"><span class="rounded-full bg-brand-pine/75 px-3 py-1 text-xs font-bold text-white">San Agustín</span></div></div>
+          <div class="p-5"><p class="text-xs font-bold uppercase tracking-wider text-state-warning">Historia y cultura</p><h3 class="mt-2 font-display text-xl font-bold">Senderos ancestrales</h3><p class="mt-2 text-sm leading-6 text-brand-muted dark:text-white/70">Explora esculturas, montículos y paisajes del parque arqueológico.</p><a href="#contacto" class="mt-4 inline-flex font-bold text-brand-forest underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-brand-forest dark:outline-brand-gold dark:text-brand-gold">Ver idea de viaje <span class="ml-2" aria-hidden="true">→</span></a></div>
+        </article>
+        <article class="group overflow-hidden rounded-3xl border border-brand-forest/10 bg-brand-paper shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-white/10 dark:bg-white/5">
+          <div role="img" aria-label="Agua termal y vegetación tropical" class="h-44 bg-[linear-gradient(160deg,#b2d1b6,#5e9382_48%,#345c4d)]"><div class="flex h-full items-end p-4"><span class="rounded-full bg-brand-pine/75 px-3 py-1 text-xs font-bold text-white">Rivera</span></div></div>
+          <div class="p-5"><p class="text-xs font-bold uppercase tracking-wider text-state-warning">Pausa y bienestar</p><h3 class="mt-2 font-display text-xl font-bold">Aguas que descansan</h3><p class="mt-2 text-sm leading-6 text-brand-muted dark:text-white/70">Regálate una pausa entre aguas termales, comida local y naturaleza.</p><a href="#contacto" class="mt-4 inline-flex font-bold text-brand-forest underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-brand-forest dark:outline-brand-gold dark:text-brand-gold">Ver idea de viaje <span class="ml-2" aria-hidden="true">→</span></a></div>
+        </article>
+        <article class="group overflow-hidden rounded-3xl border border-brand-forest/10 bg-brand-paper shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-white/10 dark:bg-white/5">
+          <div role="img" aria-label="Montañas verdes y un camino rural" class="h-44 bg-[linear-gradient(145deg,#d0bd79,#7c8d58_48%,#354d3e)]"><div class="flex h-full items-end p-4"><span class="rounded-full bg-brand-pine/75 px-3 py-1 text-xs font-bold text-white">Paicol</span></div></div>
+          <div class="p-5"><p class="text-xs font-bold uppercase tracking-wider text-state-warning">Aventura y montaña</p><h3 class="mt-2 font-display text-xl font-bold">Caminos del occidente</h3><p class="mt-2 text-sm leading-6 text-brand-muted dark:text-white/70">Planea una salida para conocer cañones, miradores y caminos verdes.</p><a href="#contacto" class="mt-4 inline-flex font-bold text-brand-forest underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-brand-forest dark:outline-brand-gold dark:text-brand-gold">Ver idea de viaje <span class="ml-2" aria-hidden="true">→</span></a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Nuestra tierra -->
+    <section id="nosotros" class="bg-brand-forest py-20 text-white dark:bg-black/20 lg:py-24">
+      <div class="mx-auto grid max-w-7xl gap-12 px-5 md:grid-cols-2 md:items-center lg:px-8">
+        <div><p class="font-bold uppercase tracking-[.18em] text-brand-gold">Viajar con sentido</p><h2 class="mt-3 font-display text-3xl font-extrabold sm:text-4xl">Un viaje que también cuida el camino.</h2><p class="mt-5 leading-7 text-white/80">Ruta Opita es un proyecto de clase para inspirar recorridos responsables por el Huila. Antes de viajar, confirma horarios, condiciones de acceso y servicios directamente con los operadores locales.</p><ul class="mt-7 space-y-3 text-sm text-white/85"><li><span class="mr-2 text-brand-gold" aria-hidden="true">✓</span> Respeta los senderos y las indicaciones locales.</li><li><span class="mr-2 text-brand-gold" aria-hidden="true">✓</span> Prefiere guías y emprendimientos de la región.</li><li><span class="mr-2 text-brand-gold" aria-hidden="true">✓</span> Lleva de regreso lo que trajiste.</li></ul></div>
+        <div class="rounded-[2rem] border border-white/15 bg-white/5 p-7 sm:p-9"><p class="text-sm font-bold uppercase tracking-wider text-brand-gold-soft">Paisajes que cuentan historias</p><div class="mt-6 grid grid-cols-2 gap-4"><div class="rounded-2xl bg-brand-pine/60 p-5"><span class="text-3xl" aria-hidden="true">☼</span><p class="mt-3 font-display text-lg font-bold">Desierto</p><p class="mt-1 text-sm text-white/70">Cielos abiertos y caminos rojizos.</p></div><div class="rounded-2xl bg-brand-pine/60 p-5"><span class="text-3xl" aria-hidden="true">⌖</span><p class="mt-3 font-display text-lg font-bold">Memoria</p><p class="mt-1 text-sm text-white/70">Patrimonio y cultura viva.</p></div><div class="rounded-2xl bg-brand-pine/60 p-5"><span class="text-3xl" aria-hidden="true">♨</span><p class="mt-3 font-display text-lg font-bold">Bienestar</p><p class="mt-1 text-sm text-white/70">Agua, descanso y naturaleza.</p></div><div class="rounded-2xl bg-brand-pine/60 p-5"><span class="text-3xl" aria-hidden="true">⌁</span><p class="mt-3 font-display text-lg font-bold">Aventura</p><p class="mt-1 text-sm text-white/70">Rutas para moverte a tu ritmo.</p></div></div></div>
+      </div>
+    </section>
+
+    <!-- Preguntas frecuentes, componente extra acordeón -->
+    <section id="preguntas" class="mx-auto max-w-4xl px-5 py-20 lg:py-24">
+      <div class="text-center"><p class="font-bold uppercase tracking-[.18em] text-state-warning">Antes de salir</p><h2 class="mt-3 font-display text-3xl font-extrabold">Preguntas frecuentes</h2></div>
+      <div class="mt-9 divide-y divide-brand-forest/15 rounded-3xl border border-brand-forest/15 bg-brand-paper px-5 dark:divide-white/10 dark:border-white/10 dark:bg-white/5">
+        <div class="py-2"><h3><button class="faq-toggle flex w-full items-center justify-between gap-4 py-4 text-left font-bold focus-visible:outline-2 focus-visible:outline-brand-forest dark:outline-brand-gold" aria-expanded="false" aria-controls="faq-1"><span>¿Ruta Opita vende paquetes o reservas?</span><span aria-hidden="true" class="faq-icon text-xl">+</span></button></h3><div id="faq-1" class="faq-panel hidden pb-4 pr-8 text-sm leading-6 text-brand-muted dark:text-white/70">No. Es una landing demostrativa para un ejercicio académico. Las rutas son ideas generales; consulta disponibilidad y precios con operadores autorizados.</div></div>
+        <div class="py-2"><h3><button class="faq-toggle flex w-full items-center justify-between gap-4 py-4 text-left font-bold focus-visible:outline-2 focus-visible:outline-brand-forest dark:outline-brand-gold" aria-expanded="false" aria-controls="faq-2"><span>¿Qué debo revisar antes de viajar?</span><span aria-hidden="true" class="faq-icon text-xl">+</span></button></h3><div id="faq-2" class="faq-panel hidden pb-4 pr-8 text-sm leading-6 text-brand-muted dark:text-white/70">Confirma transporte, clima, horarios, condiciones de acceso y recomendaciones locales. Para áreas protegidas o sitios patrimoniales, sigue las instrucciones de sus administradores.</div></div>
+        <div class="py-2"><h3><button class="faq-toggle flex w-full items-center justify-between gap-4 py-4 text-left font-bold focus-visible:outline-2 focus-visible:outline-brand-forest dark:outline-brand-gold" aria-expanded="false" aria-controls="faq-3"><span>¿Puedo proponer otro destino del Huila?</span><span aria-hidden="true" class="faq-icon text-xl">+</span></button></h3><div id="faq-3" class="faq-panel hidden pb-4 pr-8 text-sm leading-6 text-brand-muted dark:text-white/70">Sí. Usa el formulario para contarnos qué municipio o experiencia te gustaría ver en la próxima actualización.</div></div>
+      </div>
+    </section>
+
+    <!-- Formulario con validación y mensajes -->
+    <section id="contacto" class="bg-[#eae6d8] py-20 dark:bg-white/5 lg:py-24">
+      <div class="mx-auto grid max-w-7xl gap-12 px-5 md:grid-cols-[.85fr_1.15fr] lg:px-8">
+        <div><p class="font-bold uppercase tracking-[.18em] text-state-warning">Cuéntanos tu plan</p><h2 class="mt-3 font-display text-3xl font-extrabold">¿Qué te gustaría descubrir?</h2><p class="mt-4 max-w-md leading-7 text-brand-muted dark:text-white/70">Déjanos una idea de viaje. Este formulario es una demostración académica y no envía ni almacena tus datos.</p></div>
+        <form id="contact-form" class="rounded-3xl bg-brand-paper p-6 shadow-sm sm:p-8 dark:bg-brand-pine" novalidate>
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div><label for="name" class="mb-2 block text-sm font-bold">Nombre <span aria-hidden="true">*</span></label><input id="name" name="name" autocomplete="name" required aria-describedby="name-error" class="w-full rounded-xl border border-brand-forest/25 bg-white px-4 py-3 text-brand-ink outline-none transition placeholder:text-brand-muted focus-visible:border-brand-forest focus-visible:ring-2 focus-visible:ring-brand-gold dark:border-white/20 dark:bg-white/5 dark:text-white" placeholder="Tu nombre"><p id="name-error" class="mt-1 hidden text-sm text-state-error" aria-live="polite"></p></div>
+            <div><label for="email" class="mb-2 block text-sm font-bold">Correo electrónico <span aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error" class="w-full rounded-xl border border-brand-forest/25 bg-white px-4 py-3 text-brand-ink outline-none transition placeholder:text-brand-muted focus-visible:border-brand-forest focus-visible:ring-2 focus-visible:ring-brand-gold dark:border-white/20 dark:bg-white/5 dark:text-white" placeholder="nombre@correo.com"><p id="email-error" class="mt-1 hidden text-sm text-state-error" aria-live="polite"></p></div>
+          </div>
+          <div class="mt-5"><label for="interest" class="mb-2 block text-sm font-bold">¿Qué experiencia te interesa? <span aria-hidden="true">*</span></label><select id="interest" name="interest" required aria-describedby="interest-error" class="w-full rounded-xl border border-brand-forest/25 bg-white px-4 py-3 text-brand-ink outline-none focus-visible:ring-2 focus-visible:ring-brand-gold dark:border-white/20 dark:bg-white/5 dark:text-white"><option value="">Elige una opción</option><option>Tatacoa y observación del cielo</option><option>San Agustín y patrimonio</option><option>Termales y descanso</option><option>Otra ruta del Huila</option></select><p id="interest-error" class="mt-1 hidden text-sm text-state-error" aria-live="polite"></p></div>
+          <div class="mt-5"><label for="message" class="mb-2 block text-sm font-bold">Cuéntanos un poco más</label><textarea id="message" name="message" rows="3" class="w-full rounded-xl border border-brand-forest/25 bg-white px-4 py-3 text-brand-ink outline-none focus-visible:ring-2 focus-visible:ring-brand-gold dark:border-white/20 dark:bg-white/5 dark:text-white" placeholder="Fechas aproximadas, número de viajeros..."></textarea></div>
+          <button type="submit" class="mt-6 w-full rounded-full bg-brand-forest px-6 py-3.5 font-bold text-white transition hover:bg-brand-pine focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-forest dark:outline-brand-gold dark:bg-brand-gold dark:text-brand-pine">Enviar idea de viaje</button>
+          <p class="mt-3 text-xs text-brand-muted dark:text-white/60">* Campos obligatorios. La demostración no envía información a un servidor.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="bg-brand-pine px-5 py-8 text-white">
+    <div class="mx-auto flex max-w-7xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"><p class="font-display text-lg font-extrabold">Ruta <span class="text-brand-gold">Opita.</span></p><p class="text-sm text-white/70">Proyecto académico · Turismo del Huila · 2026</p><a href="#inicio" class="text-sm font-bold text-brand-gold hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-gold">Volver arriba ↑</a></div>
+  </footer>
+
+  <!-- Toast accesible -->
+  <div id="toast" class="pointer-events-none fixed bottom-5 left-1/2 z-50 hidden w-[calc(100%-2rem)] max-w-md -translate-x-1/2 rounded-2xl bg-state-success px-5 py-4 text-white shadow-xl" role="status" aria-live="polite"><p class="font-bold">¡Gracias por compartir tu idea!</p><p class="mt-1 text-sm text-white/90">Este formulario es una demo y no guardó tus datos.</p></div>
+
+  <script>
+    // Menú móvil: abrir, cerrar y cerrar después de elegir un destino.
+    const menuButton = document.querySelector('#menu-toggle');
+    const mobileMenu = document.querySelector('#mobile-menu');
+    menuButton.addEventListener('click', () => {
+      const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!isOpen));
+      menuButton.setAttribute('aria-label', isOpen ? 'Abrir menú' : 'Cerrar menú');
+      mobileMenu.classList.toggle('hidden', isOpen);
+    });
+    // Cambio 3: cerrar el menu con Escape y devolver el foco al boton.
+    document.addEventListener('keydown', (event) => {
+      if (event.key !== 'Escape') return;
+      if (menuButton.getAttribute('aria-expanded') !== 'true') return;
+      mobileMenu.classList.add('hidden');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.setAttribute('aria-label', 'Abrir menú');
+      menuButton.focus();
+    });
+
+    document.querySelectorAll('.mobile-link').forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.setAttribute('aria-label', 'Abrir menú');
+      });
+    });
+
+    // Modo oscuro manual con preferencia guardada en el navegador.
+    const themeButton = document.querySelector('#theme-toggle');
+    const savedTheme = localStorage.getItem('ruta-opita-theme');
+    if (savedTheme === 'dark') document.documentElement.classList.add('dark');
+    function updateThemeButton() {
+      const isDark = document.documentElement.classList.contains('dark');
+      themeButton.setAttribute('aria-pressed', String(isDark));
+      themeButton.setAttribute('aria-label', isDark ? 'Activar modo claro' : 'Activar modo oscuro');
+      themeButton.innerHTML = isDark ? '<span aria-hidden="true">☀</span>' : '<span aria-hidden="true">☾</span>';
+    }
+    updateThemeButton();
+    themeButton.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      const isDark = document.documentElement.classList.contains('dark');
+      localStorage.setItem('ruta-opita-theme', isDark ? 'dark' : 'light');
+      updateThemeButton();
+    });
+
+    // Acordeón FAQ: solo un panel abierto a la vez.
+    document.querySelectorAll('.faq-toggle').forEach((button) => {
+      button.addEventListener('click', () => {
+        const wasOpen = button.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.faq-toggle').forEach((other) => {
+          other.setAttribute('aria-expanded', 'false');
+          document.getElementById(other.getAttribute('aria-controls')).classList.add('hidden');
+          other.querySelector('.faq-icon').textContent = '+';
+        });
+        if (!wasOpen) {
+          button.setAttribute('aria-expanded', 'true');
+          document.getElementById(button.getAttribute('aria-controls')).classList.remove('hidden');
+          button.querySelector('.faq-icon').textContent = '−';
+        }
+      });
+    });
+
+    // Validación de campos y toast. El formulario es demostrativo y no transmite datos.
+    const form = document.querySelector('#contact-form');
+    const toast = document.querySelector('#toast');
+    function showError(input, message) {
+      const error = document.getElementById(`${input.id}-error`);
+      error.textContent = message;
+      error.classList.remove('hidden');
+      input.setAttribute('aria-invalid', 'true');
+    }
+    function clearError(input) {
+      const error = document.getElementById(`${input.id}-error`);
+      error.textContent = '';
+      error.classList.add('hidden');
+      input.removeAttribute('aria-invalid');
+    }
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const name = form.elements.name;
+      const email = form.elements.email;
+      const interest = form.elements.interest;
+      clearError(name);
+      clearError(email);
+      clearError(interest);
+      let isValid = true;
+      if (!name.value.trim()) {
+        showError(name, 'Escribe tu nombre para continuar.');
+        isValid = false;
+      }
+      if (!email.value.trim()) {
+        showError(email, 'Escribe tu correo electrónico.');
+        isValid = false;
+      } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+        showError(email, 'Revisa el formato del correo. Ejemplo: nombre@correo.com');
+        isValid = false;
+      }
+      if (!interest.value) {
+        showError(interest, 'Elige la experiencia que te interesa.');
+        isValid = false;
+      }
+      if (!isValid) {
+        form.querySelector('[aria-invalid="true"]').focus();
+        return;
+      }
+      form.reset();
+      toast.classList.remove('hidden');
+      window.setTimeout(() => toast.classList.add('hidden'), 4000);
+    });
+    // Limpia el error al corregir: 'input' para texto, 'change' para el select.
+    form.querySelectorAll('input, select').forEach((campo) => {
+      campo.addEventListener(campo.tagName === 'SELECT' ? 'change' : 'input', () => clearError(campo));
+    });
+  </script>
+</body>
+</html>
