@@ -2,7 +2,8 @@
 
 Landing page académica para presentar ideas de viaje por el Huila. Construida con HTML, Tailwind CSS 4 mediante Play CDN y JavaScript sin librerías adicionales.
 
-**Sitio publicado:** <!-- pega aquí la URL de GitHub Pages o Netlify -->
+**Sitio publicado:** <https://luislaureanobe-stack.github.io/ruta-opita/>
+**Repositorio:** <https://github.com/luislaureanobe-stack/ruta-opita>
 **Autor:** Luis Armando Laureano Betanconurth
 **Asignatura:** Seminario en Gestión de Software Ágil Asistido por IA · Módulo 3
 **Docente:** Camilo Morales Vargas
@@ -167,10 +168,11 @@ document.addEventListener('keydown', (event) => {
 
 ## Publicación
 
-1. Crea un repositorio público en GitHub y sube `index.html`, `README.md` y la carpeta `assets` si existe.
-2. En **Settings → Pages**, elige la rama `main` y la carpeta `/ (root)`.
-3. Espera un par de minutos y abre la URL que aparece; verifica que cargue desde el celular.
-4. Pega esa URL arriba, en la sección inicial de este archivo.
+Publicado con GitHub Pages desde la rama `main`, carpeta `/ (root)`:
+
+- **Sitio:** <https://luislaureanobe-stack.github.io/ruta-opita/>
+- **Repositorio:** <https://github.com/luislaureanobe-stack/ruta-opita>
+- Verificado con respuesta HTTP 200 y apertura desde el celular.
 
 ## Fuentes de contenido y técnica
 
